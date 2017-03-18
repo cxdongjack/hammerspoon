@@ -20,6 +20,8 @@ end)
 -- hints
 ----------------
 hs.hints.hintChars = utils.strToTable('ASDFGQWERTZXCVB12345')
+prefix.bind('ctrl', 'v', function() hs.hints.windowHints() end)
 prefix.bind('', 'w', function() hs.hints.windowHints() end)
+
 
 

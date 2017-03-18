@@ -30,7 +30,6 @@ function module.bindMultiple(mod, key, pressedFn, releasedFn, repeatFn)
 end
 
 module.bind('', 'escape', module.exit)
-module.bind(config.prefixMod, config.prefixKey, module.exit)
 
 module.bind('', 'd', hs.toggleConsole)
 module.bind('', 'r', hs.reload)
