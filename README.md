@@ -2,11 +2,11 @@
 This configuration provide a lot of hotkeys for productivity without change established habits.
 
 # Install
-  $ brew cask install hammerspoon
-  $ git clone https://github.com/agzam/spacehammer ~/.hammerspoon
+  - $ brew cask install hammerspoon
+  - $ git clone https://github.com/agzam/spacehammer ~/.hammerspoon
 
-# Tmux style hotkeys
-  This configuration heavily uses Tmux style hotkey binding, i.e., using a prefix to activate hotkeys.
+# Emacs style hotkeys
+  This configuration heavily uses Emacs style hotkey binding, i.e., using the prefix to activate hotkeys.
   The default prefix is `ctrl+v`, e.g., `prefix - w` = press and release `ctrl+v` first, then press `w`.
 
   - `prefix - ?`: help.
