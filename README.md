@@ -32,8 +32,8 @@ This configuration provide a lot of hotkeys for productivity without change esta
   - `option + [/]`: cmd [+ shift] + tab (switch tabs).
   - `option + q`: esc.
   - `option + m` / `option + 1`: play.
-  - `option + i` / `option + 2`: previous track.
-  - `option + o` / `option + 3`: next track.
+  - `option + <` / `option + 2`: previous track.
+  - `option + >` / `option + 3`: next track.
   - `option + /` / `option + f1`: mute.
   - `option + ,` / `option + f2`: volume down.
   - `option + .` / `option + f3`: volume up.
