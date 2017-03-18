@@ -23,6 +23,9 @@ end
 
 function module.bind(mod, key, fn)
     modal:bind(mod, key, nil, function() fn(); module.exit() end)
+    if mod == '' then
+        modal:bind('ctrl', key, nil, function() fn(); module.exit() end)
+    end
 end
 
 function module.bindMultiple(mod, key, pressedFn, releasedFn, repeatFn)
