@@ -3,7 +3,7 @@ This configuration provide a lot of hotkeys for productivity without change esta
 
 # Install
   - $ brew cask install hammerspoon
-  - $ git clone https://github.com/agzam/spacehammer ~/.hammerspoon
+  - $ git clone https://github.com/cxdongjack/hammerspoon.git ~/.hammerspoon
 
 # Emacs style hotkeys
   This configuration heavily uses Emacs style hotkey binding, i.e., using the prefix to activate hotkeys.
