@@ -35,7 +35,8 @@ local KEYS = {'h', 'j', 'k', 'l'}
 -- ------------
 -- move
 -- ------------
-local DELTA = 50
+local FAST_DELTA = 100
+local DELTA = 30
 local SLOW_DELTA = 5
 
 local function moveMouse(dx, dy)
@@ -46,10 +47,12 @@ local function moveMouse(dx, dy)
 end
 
 for i = 1, 4 do
+    local fn = hs.fnutils.partial(moveMouse, DX[i] * FAST_DELTA, DY[i] * FAST_DELTA)
+    modal:bind('ctrl', KEYS[i], fn, nil, fn)
     local fn = hs.fnutils.partial(moveMouse, DX[i] * DELTA, DY[i] * DELTA)
-    modal:bind('', KEYS[i], fn, nil, fn)
+    modal:bind('cmd', KEYS[i], fn, nil, fn)
     local fnSlow = hs.fnutils.partial(moveMouse, DX[i] * SLOW_DELTA, DY[i] * SLOW_DELTA)
-    modal:bind('cmd', KEYS[i], fnSlow, nil, fnSlow)
+    modal:bind('', KEYS[i], fnSlow, nil, fnSlow)
 end
 
 -- ------------
