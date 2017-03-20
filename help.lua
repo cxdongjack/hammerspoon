@@ -38,9 +38,6 @@ function generateHtml()
   - `option + .` / `option + f3`: volume up.
   - `press ctrl twice`: escape
   - `press cmd Q twice`: quit app, in order to prevent accidentally quitting an app when pressing `cmd+q`.
-
-#  Desktop Client enhancements
-  - Switching to IM(Wechat, QQ) window automatically opens IM's "find" dialog
 </pre>
 ]]
 end

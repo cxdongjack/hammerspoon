@@ -40,9 +40,6 @@ This configuration provide a lot of hotkeys for productivity without change esta
   - `press ctrl twice`: escape
   - `press cmd Q twice`: quit app, in order to prevent accidentally quitting an app when pressing `cmd+q`.
 
-#  Desktop Client enhancements
-  - Switching to IM(Wechat, QQ) window automatically opens IM's "find" dialog
-
 # Thanks to
 https://github.com/Hammerspoon/hammerspoon/wiki/Sample-Configurations
 https://github.com/raulchen/dotfiles/tree/master/hammerspoon

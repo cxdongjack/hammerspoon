@@ -18,6 +18,7 @@ require("double_cmdq_to_quit")
 require("double_ctrl")
 
 -- 优化APP体验
-require("app_advance")
+-- 优化失败，体验并不好, 暂时关闭
+--require("app_advance")
 -- require("url_dispatcher")
 
