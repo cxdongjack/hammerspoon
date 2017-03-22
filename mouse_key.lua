@@ -55,6 +55,13 @@ for i = 1, 4 do
     modal:bind('', KEYS[i], fnSlow, nil, fnSlow)
 end
 
+for i = 1, 4 do
+    local fn = hs.fnutils.partial(moveMouse, DX[i] * DELTA, DY[i] * DELTA)
+    hs.hotkey.bind({'alt'}, KEYS[i], fn, nil, fn)
+    local fn = hs.fnutils.partial(moveMouse, DX[i] * SLOW_DELTA, DY[i] * SLOW_DELTA)
+    hs.hotkey.bind({'alt', 'ctrl'}, KEYS[i], fn, nil, fn)
+end
+
 -- ------------
 -- scroll
 -- ------------
@@ -71,6 +78,7 @@ end
 for i = 1, 4 do
     local fn = hs.fnutils.partial(scroll, SDX[i] * SCROLL_DELTA, SDY[i] * SCROLL_DELTA)
     modal:bind('shift', KEYS[i], fn, nil, fn)
+    hs.hotkey.bind({'alt', 'shift'}, KEYS[i], fn, nil, fn)
 end
 
 -- ------------
@@ -91,3 +99,4 @@ end
 modal:bind('', 'u', hs.fnutils.partial(click, 0), nil, nil)
 modal:bind('', 'i', hs.fnutils.partial(click, 1), nil, nil)
 modal:bind('', 'o', hs.fnutils.partial(click, 2), nil, nil)
+hs.hotkey.bind({'alt'}, 'return', hs.fnutils.partial(click, 0), nil, nil)
