@@ -5,7 +5,7 @@ hs.window.animationDuration = 0
 return {
     -- 快捷键入口
     prefixMod = 'ctrl',
-    prefixKey = 'v',
+    prefixKey = ',',
     -- APP快捷键
     app = {
         e = 'Evernote',
