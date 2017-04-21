@@ -13,7 +13,5 @@ return {
         -- d = 'Dash',
         -- c = 'Chrome',
         -- s = 'Sublime Text',
-    },
-    -- 访问IM软件直接进入搜索
-    IM = {'QQ', '微信'},
+    }
 }
