@@ -5,9 +5,19 @@ This configuration provide a lot of hotkeys for productivity without change esta
   - $ brew cask install hammerspoon
   - $ git clone https://github.com/cxdongjack/hammerspoon.git ~/.hammerspoon
 
+# Improve window hints
+Make the window hints to fixed hotkey 
+
+Hotkey generation algorithm as below:
+- try to find char in user specific dict, like { ['com.sublimetext.3'] = 'S' }
+- parse the bundleID to single char, like com.apple.Terminal -> 'T', bundleID is stable than title
+- loop the charhints(i.e ABC..XYZ), find the nil char in 'dict'
+
+![screenshot](https://cloud.githubusercontent.com/assets/5095449/25552880/7b3adc8a-2cd7-11e7-9a09-cc11f3ba25b7.png)
+
 # Emacs style hotkeys
   This configuration heavily uses Emacs style hotkey binding, i.e., using the prefix to activate hotkeys.
-  The default prefix is `ctrl+v`, e.g., `prefix - w` = press and release `ctrl+v` first, then press `w`.
+  The default prefix is `ctrl+,`, e.g., `prefix - w` = press and release `ctrl+,` first, then press `w`.
 
   - `prefix - ?`: help.
   - `prefix - g`: show a 3x3 grid for resizing window.
