@@ -73,7 +73,10 @@ function hs.hints.addWindow(dict, win)
 
 end
 
-local wins = hs.window.allWindows()
-table.sort(wins, function(a, b) return a:id() < b:id() end)
+function showHints()
+  local wins = hs.window.allWindows()
+  table.sort(wins, function(a, b) return a:id() < b:id() end)
+  hs.hints.windowHints(wins)
+end
 
-hs.hotkey.bind({'ctrl'}, 'v', function() hs.hints.windowHints(wins) end, nil, nil)
+hs.hotkey.bind({'ctrl'}, 'v', showHints, nil, nil)
