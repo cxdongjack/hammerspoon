@@ -5,7 +5,7 @@ require('help')
 
 -- 新功能
 require("window")
-require("mouse_key") -- 九宫格选择
+-- require("mouse_key") -- 九宫格选择
 require("caffeinate")
 require("redshift")
 require("launch")

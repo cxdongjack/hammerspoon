@@ -19,11 +19,61 @@ end)
 ----------------
 -- hints
 ----------------
-hs.hints.hintChars = utils.strToTable('ASDFGQWERTZXCVB12345')
+hs.hints.hintChars = utils.strToTable('ABCDEFBCDEFGHIJKLMNOPQRSTUVWXYZ1234567890')
 prefix.bind('', 'w', function() hs.hints.windowHints() end)
 
-hs.hotkey.bind({'ctrl'}, 'v', function() hs.hints.windowHints() end, nil, nil)
+local hintDict = {
+    -- 快捷键入口
+    ['com.sublimetext.3'] = 'S'
+}
+
+function hs.hints.addWindow(dict, win) 
+  local hintChars = utils.strToTable('ABCDEFBCDEFGHIJKLMNOPQRSTUVWXYZ')
+  local hintInts = utils.strToTable('1234567890')
+
+  function findChar(win, dict, chars) 
+    if hintDict[win:application():bundleID()] then
+      return hintDict[win:application():bundleID()]
+    end
+    local char = winToChar(win)
+    if dict[char] == nil then
+      return char
+    end
+    return findNilChar(dict, chars)
+  end
+
+  function winToChar(win)
+    -- i.e. com.sublimetext.sublime
+    local id = win:application():bundleID()
+    -- .sublime
+    local match = string.match(id, '[.][^.]+$')
+    if match then
+      -- s
+      return string.sub(match, 2, 2):upper()
+    end
+  end
+
+  function findNilChar(dict, chars)
+    for i = 1, #chars do
+      if dict[chars[i]] == nil then
+        return chars[i]
+      end
+    end
+    -- protect: in case more then max size
+    return chars[0]
+  end
 
 
+  local char = findChar(win, dict, hintChars)
+  if dict[char] == nil then
+    dict[char] = win
+  else
+    dict[findNilChar(dict, hintInts)] = win
+  end
 
+end
 
+local wins = hs.window.allWindows()
+table.sort(wins, function(a, b) return a:id() < b:id() end)
+
+hs.hotkey.bind({'ctrl'}, 'v', function() hs.hints.windowHints(wins) end, nil, nil)
