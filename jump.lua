@@ -34,7 +34,7 @@ function hs.hints.addWindow(dict, win)
   local hintChars = utils.strToTable('ABCDEFBCDEFGHIJKLMNOPQRSTUVWXYZ')
   local hintInts = utils.strToTable('1234567890')
 
-  function findChar(win, dict, chars) 
+  function findChar(win, dict, chars, backupChars) 
     if hintDict[win:application():bundleID()] then
       return hintDict[win:application():bundleID()]
     end
@@ -42,7 +42,7 @@ function hs.hints.addWindow(dict, win)
     if dict[char] == nil then
       return char
     end
-    return findNilChar(dict, chars)
+    return findNilChar(dict, backupChars)
   end
 
   function winToChar(win)
@@ -67,12 +67,8 @@ function hs.hints.addWindow(dict, win)
   end
 
 
-  local char = findChar(win, dict, hintChars)
-  if dict[char] == nil then
-    dict[char] = win
-  else
-    dict[findNilChar(dict, hintInts)] = win
-  end
+  local char = findChar(win, dict, hintChars, hintInts)
+  dict[char] = win
 
 end
 
