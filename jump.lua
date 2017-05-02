@@ -22,9 +22,12 @@ end)
 hs.hints.hintChars = utils.strToTable('ABCDEFBCDEFGHIJKLMNOPQRSTUVWXYZ1234567890')
 prefix.bind('', 'w', function() hs.hints.windowHints() end)
 
+-- 依次找重音，避免重复
 local hintDict = {
     -- 快捷键入口
-    ['com.sublimetext.3'] = 'S'
+    ['com.sublimetext.3'] = 'S',
+    -- 日历
+    ['com.apple.iCal'] = 'L'
 }
 
 function hs.hints.addWindow(dict, win) 
