@@ -6,7 +6,7 @@ hs.window.animationDuration = 0
 ----------------
 -- Grid
 ----------------
-hs.grid.setGrid('3x3', nil, nil)
+hs.grid.setGrid('4x4', nil, nil)
 hs.grid.setMargins({0, 0})
 prefix.bind('', 'g', function() hs.grid.show() end)
 
