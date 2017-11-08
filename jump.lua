@@ -78,4 +78,4 @@ function showHints()
   hs.hints.windowHints(wins)
 end
 
-hs.hotkey.bind({'alt'}, 'j', showHints, nil, nil)
+hs.hotkey.bind({'ctrl'}, '\'', showHints, nil, nil)
