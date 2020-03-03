@@ -21,9 +21,6 @@ remap({'ctrl', 'shift'}, 'n', pressFn({'shift'}, 'down'))
 remap({'ctrl', 'shift'}, 'p', pressFn({'shift'}, 'up'))
 remap({'ctrl', 'shift'}, 'f', pressFn({'shift'}, 'right'))
 
-remap({'ctrl', 'shift'}, 'a', pressFn({'ctrl', 'shift'}, 'left'))
-remap({'ctrl', 'shift'}, 'e', pressFn({'ctrl', 'shift'}, 'right'))
-
 remap({'ctrl', 'cmd'}, 'b', pressFn({'cmd'}, 'left'))
 remap({'ctrl', 'cmd'}, 'n', pressFn({'cmd'}, 'down'))
 remap({'ctrl', 'cmd'}, 'p', pressFn({'cmd'}, 'up'))
@@ -53,3 +50,9 @@ remap({'ctrl', 'cmd', 'alt', 'shift'}, 'b', pressFn({'cmd', 'alt', 'shift'}, 'le
 remap({'ctrl', 'cmd', 'alt', 'shift'}, 'n', pressFn({'cmd', 'alt', 'shift'}, 'down'))
 remap({'ctrl', 'cmd', 'alt', 'shift'}, 'p', pressFn({'cmd', 'alt', 'shift'}, 'up'))
 remap({'ctrl', 'cmd', 'alt', 'shift'}, 'f', pressFn({'cmd', 'alt', 'shift'}, 'right'))
+
+-- others
+remap({'ctrl', 'shift'}, 'a', pressFn({'ctrl', 'shift'}, 'left'))
+remap({'ctrl', 'shift'}, 'e', pressFn({'ctrl', 'shift'}, 'right'))
+
+

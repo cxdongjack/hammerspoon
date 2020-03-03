@@ -17,7 +17,7 @@ require("jump")
 -- 映射
 -- 全局将fbnp映射成方向键
 require("arrowmap")
--- require("keymaps")
+require("keymaps")
 -- require("switcher")
 -- require("double_ctrl")
 
