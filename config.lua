@@ -8,10 +8,11 @@ return {
     prefixKey = '\'',
     -- APP快捷键
     app = {
-        e = 'Evernote',
-        -- f = 'Finder',
-        -- d = 'Dash',
-        -- c = 'Chrome',
-        -- s = 'Sublime Text',
+        k = '飞书',
+        h = '微信',
+        j = '印象笔记',
+        l = '浏览器',
+        m = '邮件',
+        i = '日历',
     }
 }

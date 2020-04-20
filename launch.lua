@@ -6,8 +6,19 @@ local prefix = require('prefix')
 local key2app = config.app
 print(config.key2app)
 
+-- for key, app in pairs(key2app) do
+--     prefix.bind('', key, function()
+--         toggle_application(app)
+--     end)
+-- end
+
+local function remap(mods, key, pressFn)
+    hs.hotkey.bind(mods, key, pressFn, nil, pressFn)
+end
+
 for key, app in pairs(key2app) do
-    prefix.bind('', key, function()
+    remap({'ctrl', 'cmd'}, key, function()
+        print('current app name', hs.application.frontmostApplication():name())
         toggle_application(app)
     end)
 end
