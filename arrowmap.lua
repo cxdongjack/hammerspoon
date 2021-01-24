@@ -52,7 +52,7 @@ remap({'ctrl', 'cmd', 'alt', 'shift'}, 'p', pressFn({'cmd', 'alt', 'shift'}, 'up
 remap({'ctrl', 'cmd', 'alt', 'shift'}, 'f', pressFn({'cmd', 'alt', 'shift'}, 'right'))
 
 -- others
-remap({'ctrl', 'shift'}, 'a', pressFn({'ctrl', 'shift'}, 'left'))
-remap({'ctrl', 'shift'}, 'e', pressFn({'ctrl', 'shift'}, 'right'))
+remap({'ctrl', 'shift'}, 'a', pressFn({'cmd', 'shift'}, 'left'))
+remap({'ctrl', 'shift'}, 'e', pressFn({'cmd', 'shift'}, 'right'))
 
 
